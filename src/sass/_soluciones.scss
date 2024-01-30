@@ -1,0 +1,272 @@
+@mixin arreglar-imagen {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 350px;
+  height: 450px;
+  margin: 0 15px 0 15px;
+  filter: contrast(80%);
+  cursor: pointer;
+  position: relative;
+  align-items: center;
+}
+@mixin arreglar-imagen-keyframes() {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50px);
+  }
+}
+@mixin hover-texto {
+  display: flex;
+  text-align: center;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+@mixin hover-enlace {
+  display: flex;
+  text-decoration: underline;
+  text-align: center;
+  font-weight: 900;
+  line-height: 1.5;
+}
+.soluciones {
+  background-color: #f9f9f9;
+  &_texto {
+    h2 {
+      text-align: center;
+      color: #33693b;
+      font-size: 33px;
+      font-weight: 700;
+      padding-top: 80px;
+    }
+    p {
+      text-align: center;
+      font-weight: 400;
+      color: #9b9b9b;
+      line-height: 1.21;
+      margin-bottom: 80px;
+    }
+  }
+  &_imagenes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    &_imagen1 {
+      background-image: url("../img/seguridad\ privada.jpg");
+      @include arreglar-imagen;
+      &:hover {
+        background-image: linear-gradient(
+            rgba(30, 80, 40, 0.7),
+            rgb(54, 91, 62)
+          ),
+          url("../img/seguridad\ privada.jpg");
+
+        animation-duration: 2s;
+        animation-direction: alternate;
+        animation-name: image1;
+      }
+      @keyframes image1 {
+        @include arreglar-imagen-keyframes();
+      }
+
+      a {
+        picture {
+          img {
+            width: 80px;
+            filter: brightness(0) invert(1);
+            margin: 280px 150px 15px 140px;
+          }
+        }
+
+        h2 {
+          position: absolute;
+          margin: 0 0 0 60px;
+          font-weight: 800;
+        }
+        .texto {
+          display: none;
+          position: absolute;
+        }
+        .enlace {
+          display: none;
+          position: absolute;
+        }
+      }
+      &:hover {
+        img {
+          margin-top: 120px;
+        }
+        .texto {
+          @include hover-texto();
+          margin-top: 50px;
+          margin-left: 10%;
+          margin-right: 10%;
+        }
+        .enlace {
+          @include hover-enlace();
+          margin: 140px 130px auto 140px;
+        }
+      }
+    }
+    &_imagen2 {
+      background-image: url("../img/seguridad\ electronica.jpg");
+      @include arreglar-imagen;
+      &:hover {
+        background-image: linear-gradient(
+            rgba(30, 80, 40, 0.7),
+            rgb(54, 91, 62)
+          ),
+          url("../img/seguridad\ electronica.jpg");
+        animation-duration: 2s;
+        animation-direction: alternate;
+        animation-name: image2;
+      }
+      @keyframes image2 {
+        @include arreglar-imagen-keyframes();
+      }
+      a {
+        text-align: center;
+        align-items: center;
+        img {
+          width: 80px;
+          margin: 280px 150px 0 140px;
+        }
+        h2 {
+          position: absolute;
+          margin: 0 0 0 30px;
+          font-weight: 800;
+        }
+        .texto {
+          display: none;
+          position: absolute;
+        }
+        .enlace {
+          display: none;
+          position: absolute;
+        }
+      }
+      &:hover {
+        img {
+          margin-top: 160px;
+        }
+        .texto {
+          @include hover-texto();
+          margin-top: 50px;
+          margin-left: 10%;
+          margin-right: 10%;
+        }
+        .enlace {
+          @include hover-enlace();
+          margin: 160px 130px auto 140px;
+        }
+      }
+    }
+    &_imagen3 {
+      background-image: url("../img/seguridad\ de\ eventos.png");
+      @include arreglar-imagen;
+      &:hover {
+        background-image: linear-gradient(
+            rgba(30, 80, 40, 0.7),
+            rgb(54, 91, 62)
+          ),
+          url("../img/seguridad\ de\ eventos.png");
+        animation-duration: 2s;
+        animation-direction: alternate;
+        animation-name: image3;
+      }
+      @keyframes image3 {
+        @include arreglar-imagen-keyframes();
+      }
+      a {
+        text-align: center;
+        align-items: center;
+        img {
+          width: 100px;
+          margin: 280px 150px 0 120px;
+        }
+        h2 {
+          position: absolute;
+          margin: 0 0 0 30px;
+          font-weight: 800;
+        }
+        .texto {
+          display: none;
+          position: absolute;
+        }
+        .enlace {
+          display: none;
+          position: absolute;
+        }
+      }
+      &:hover {
+        img {
+          margin-top: 140px;
+        }
+        .texto {
+          @include hover-texto();
+          margin-top: 50px;
+          margin-left: 10%;
+          margin-right: 10%;
+        }
+        .enlace {
+          @include hover-enlace();
+          margin: 110px 130px auto 140px;
+        }
+      }
+    }
+  }
+  &_button-agenda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      text-decoration: none;
+      padding-bottom: 60px;
+      span {
+        background-color: #33693b;
+        font-size: 14px;
+        font-weight: bold;
+        border: 2px solid #33693b;
+        color: white;
+        padding: 20px 30px;
+        cursor: pointer;
+      }
+      span:hover {
+        background-color: white;
+        color: #33693b;
+        border: 2px solid #33693b;
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .soluciones {
+    &_texto {
+      h2 {
+        font-size: 28px;
+        font-weight: 900;
+        line-height: 42px;
+      }
+      p {
+        font-size: 16px;
+        margin: 40px 30px 80px;
+      }
+    }
+    &_imagenes {
+      flex-direction: column;
+      &_imagen1 {
+        margin: 15px 0;
+      }
+      &_imagen2 {
+        margin: 15px 0;
+      }
+      &_imagen3 {
+        margin: 15px 0;
+      }
+    }
+  }
+}

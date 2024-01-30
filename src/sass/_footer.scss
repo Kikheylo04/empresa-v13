@@ -1,0 +1,149 @@
+@mixin configurar-enlace {
+  a {
+    text-decoration: none;
+    line-height: 26px;
+  }
+  a:hover {
+    opacity: 0.1;
+  }
+}
+.footer {
+  background-color: #33693b;
+  margin: 1px -8px -7px;
+  padding: 50px 15% 20px 5%;
+  .secciones {
+    display: flex;
+    justify-content: center;
+    .seccion1 {
+      margin-right: 30px;
+      picture {
+        img {
+          width: 235px;
+          height: 119.67px;
+        }
+      }
+      p {
+        margin-top: 40px;
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+      .footer-data {
+        display: flex;
+        padding-right: 25px;
+        picture {
+          img {
+            width: 40px;
+            height: 40px;
+          }
+        }
+        span {
+          margin-top: 5px;
+          margin-left: 5px;
+          font-size: 15px;
+          line-height: 25px;
+          font-weight: normal;
+        }
+      }
+      .redes-sociales {
+        display: flex;
+        margin-top: 10px;
+        p {
+          height: 30px;
+          margin: 5px 5px;
+        }
+      }
+    }
+    .seccion2 {
+      margin-left: 50px;
+      p {
+        font-size: 18px;
+        font-weight: 700;
+      }
+      .nosotro {
+        margin-bottom: 10px;
+        @include configurar-enlace();
+      }
+    }
+    .seccion3 {
+      margin-left: 50px;
+      p {
+        font-size: 18px;
+        font-weight: 700;
+      }
+      .seguridad {
+        margin-bottom: 10px;
+        @include configurar-enlace();
+      }
+    }
+    .seccion4 {
+      margin-left: 50px;
+      p {
+        font-size: 18px;
+        font-weight: 700;
+      }
+      .solucion {
+        margin-bottom: 10px;
+        @include configurar-enlace();
+      }
+    }
+  }
+  .creditos {
+    p:nth-child(1) {
+      font-size: 17px;
+      line-height: 26px;
+      text-align: center;
+      color: #9b9b9b;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .footer {
+    padding: 50px 10% 20px 10%;
+    .secciones {
+      display: block;
+      text-align: center;
+      .seccion1 {
+        margin-right: 0px;
+        .footer-data {
+          align-items: center;
+          justify-content: center;
+          margin: 10px 0px;
+          padding-right: 0px;
+          span {
+            margin-top: 0;
+          }
+        }
+        .redes-sociales {
+          justify-content: center;
+          margin-top: 20px;
+        }
+      }
+      .seccion2 {
+        margin-left: 0px;
+        margin-bottom: 40px;
+        p {
+          margin-bottom: 30px;
+        }
+      }
+      .seccion3 {
+        margin-left: 0px;
+        margin-bottom: 40px;
+        p {
+          margin-bottom: 30px;
+        }
+      }
+      .seccion4 {
+        margin-left: 0px;
+        margin-bottom: 40px;
+        p {
+          margin-bottom: 30px;
+        }
+      }
+    }
+    .creditos {
+      p:nth-child(1) {
+        font-size: 13px;
+      }
+    }
+  }
+}

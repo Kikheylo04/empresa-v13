@@ -1,0 +1,21 @@
+/* .circle {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  background-color: #33693b;
+  border-radius: 50%;
+
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: initial;
+  animation-name: animation1;
+} */
+
+/* @keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+} */

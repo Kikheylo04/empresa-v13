@@ -1,0 +1,96 @@
+@mixin arreglar-imagen {
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 50px;
+}
+@mixin arreglar-swiper-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 14px;
+  font-weight: 900px;
+  margin: 0 50%;
+  position: absolute;
+  bottom: -15px;
+  transform: translate(-50%);
+  white-space: nowrap;
+}
+
+.agentes {
+  margin-bottom: 60px;
+  height: 100%;
+
+  h2 {
+    color: #33693b;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 60px;
+  }
+  .agentes-text {
+    display: flex;
+    justify-content: center;
+    margin: 0 20rem 80px 20rem;
+    picture {
+      margin-right: 50px;
+      img {
+        position: absolute;
+        width: 100px;
+        opacity: 0.2;
+      }
+    }
+
+    span {
+      margin-top: 40px;
+      position: relative;
+      color: #9b9b9b;
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+  }
+  .swiper-pagination-bullet:nth-child(1) {
+    position: relative;
+    background-image: url("https://v13sac.com/wp-content/uploads/2019/09/cafeta-300x300.jpg");
+    @include arreglar-imagen();
+  }
+  .swiper-pagination-bullet:nth-child(1)::after {
+    content: "Cafetería";
+    @include arreglar-swiper-pagination();
+  }
+  .swiper-pagination-bullet:nth-child(2) {
+    position: relative;
+    background-image: url("https://v13sac.com/wp-content/uploads/2019/09/deporte-300x300.jpg");
+    @include arreglar-imagen();
+  }
+  .swiper-pagination-bullet:nth-child(2)::after {
+    content: "Tienda deportiva";
+    @include arreglar-swiper-pagination();
+  }
+  .swiper-pagination-bullet:nth-child(3) {
+    position: relative;
+    background-image: url("https://v13sac.com/wp-content/uploads/2019/09/centro-300x300.jpg");
+    @include arreglar-imagen();
+  }
+
+  .swiper-pagination-bullet:nth-child(3)::before {
+    content: "Centro comercial";
+    @include arreglar-swiper-pagination();
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .agentes {
+    .agentes-text {
+      margin: 0 20px 80px;
+      span {
+        margin-right: 20px;
+        font-size: 21px;
+        font-weight: 500;
+        line-height: 34px;
+      }
+    }
+  }
+}

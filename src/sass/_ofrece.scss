@@ -1,0 +1,39 @@
+.ofrece {
+  background-image: url("https://v13sac.com/wp-content/uploads/2019/09/empresa_de_seguridad.jpg?id=1620");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 -8px;
+  padding: 13% 3% 20%;
+  span {
+    display: flex;
+    font-size: 55px;
+    font-weight: 700;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 20px;
+  }
+  a {
+    button {
+      position: absolute;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      background-color: #33693b;
+      border-radius: 6px;
+      border: 2px solid #33693b;
+      padding: 15px 50px;
+      cursor: pointer;
+      margin-top: 40px;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .ofrece {
+    padding-bottom: 35%;
+    span {
+      font-size: 40px;
+      width: 60%;
+    }
+  }
+}
